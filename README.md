@@ -10,7 +10,7 @@ My train data is extreme small, thus don't expect it to be applied in the real s
 
 ## Results Display
 
-<img src="demo\BingBing.jpg" alt="BingBing"width="270" height="561" />
+<img src="demo\BingBing.jpg" alt="BingBing" width="270" height="561" />
 
 <img src="demo\dogs.jpg" alt="dogs" width="270" height="561" />
 

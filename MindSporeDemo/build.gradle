@@ -1,0 +1,30 @@
+repositories {
+    mavenCentral()	
+    jcenter()
+    google()
+}
+buildscript {
+    repositories {
+	maven{ url = "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url "https://developer.huawei.com/repo/" }
+        jcenter()
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.1'
+    }
+}
+
+allprojects {
+    repositories {
+	maven{ url = "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url "https://developer.huawei.com/repo/" }
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

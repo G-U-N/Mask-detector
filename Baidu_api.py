@@ -64,6 +64,6 @@ if __name__=="__main__":
     1737 英语
     '''
     result=Clinet.asr(get_file_content(in_path),'wav',16000,{'dev_pid':1537,})
-    print(result)
+    #print(result)
     print(result['result'][0])
 

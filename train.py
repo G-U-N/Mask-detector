@@ -75,7 +75,7 @@ if __name__ == '__main__':
 
     mymodel = Models(network, loss_fn, mask_data_loader, optimizer)
 
-    mymodel.trainloop(20)
+#    mymodel.trainloop(20)
 
 #    mymodel.model_save("simple-CNN.pkl")
 

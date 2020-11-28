@@ -71,12 +71,12 @@ if __name__ == '__main__':
     #network = models.resnet18(num_classes=1)
     network=Network_simple_cnn()
     loss_fn = nn.BCELoss()
-    optimizer = optim.Adam(network.parameters(), lr=0.007)
+    optimizer = optim.Adam(network.parameters(), lr=0.001)
 
     mymodel = Models(network, loss_fn, mask_data_loader, optimizer)
 
-#    mymodel.trainloop(20)
+    mymodel.trainloop(50)
 
-#    mymodel.model_save("simple-CNN.pkl")
+    #mymodel.model_save("simple-CNN.pkl")
 
 #    mymodel.model_load("simple-CNN.pkl")

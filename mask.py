@@ -33,7 +33,7 @@ def rec(img):
             cv2.rectangle(img, (left, top),
                           (right, bottom), (0, 255, 0), 2)
             img1 = cv2.resize(
-                img[top:bottom, left:right], dsize=(150, 150))
+                img[top:bottom, left:right], dsize=(256,256))
             img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
             img1 = preprocess(Image.fromarray(img1))
             img1=img1.unsqueeze(0)

@@ -8,7 +8,7 @@ import os
 import torch.optim as optim
 import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
-from torch.nn import Conv2d,BatchNorm2d,ReLU,MaxPool2d,Sequential,Linear,Sigmoid
+from torch.nn import Conv2d,BatchNorm2d,ReLU,MaxPool2d,Sequential,Linear,Sigmoid,Dropout
 from PIL import Image
 from torch import imag
 from torch.nn.modules import loss
@@ -25,10 +25,13 @@ class Network_simple_cnn(nn.Module):
             BatchNorm2d(4),
             ReLU(inplace=True),
             MaxPool2d(kernel_size=2, stride=3),
+            
         )
 
         self.linear_layers = Sequential(
-            Linear(2500,1),
+            Linear(2500,256),
+            Dropout(0.3),
+            Linear(256,1),
             Sigmoid()    
         )
 
